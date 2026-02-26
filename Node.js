@@ -5,15 +5,33 @@ const app = express();
 app.use(bodyParser.json());
 
 const jadwal = {
-  "10": {
-    "senin": "Matematika, Bahasa Indonesia, Fisika",
-    "selasa": "Biologi, Sejarah, Bahasa Inggris"
+  "senin": {
+    "08-30="bahasa bali,"
+    "08-50="ipas"
+    "09-30="bahasa indonesia,"
   },
-  "11": {
-    "senin": "Kimia, Matematika, Ekonomi",
-    "selasa": "Geografi, Bahasa Indonesia"
-  }
-};
+  "selasa": {
+    "06-45:"pjok,"
+    "09-30:"dda,"
+    "14-20="matematika,"
+  },
+"rabu": {
+    "07-30="ppkn,"
+    "o8-50="matematika,"
+    "10-40="seni budaya,"
+    "12-00="sejarah,"
+    "14-20="bk,"
+    "15-20="bahasa indonesia,"
+},
+"kamis": {
+    "07-30="kka,"
+    "08-50="dda,"
+    "13-40="agama hindu,"
+},
+"jumat": {
+    "07-30="informatika,"
+    "11-20="bahasa inggris,"
+      
 
 app.post("/webhook", (req, res) => {
   const kelas = req.body.queryResult.parameters.kelas;
